@@ -1,0 +1,42 @@
+/* Font Family CDN */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/* css 를 import 할때는 @import  web font를 import 할때는 @font-face 이렇게 중요한건 아니지만 그냥 */
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+
+  /* Font Family */
+  --primary-kr: 'Noto Sans KR', sans-serif;
+  --primary-en: 'Roboto', sans-serif;
+  --logo-en: 'Bree Serif', serif;
+  --secondary-kr: 'NEXON Lv2 Gothic';
+
+  /* Text Color */
+  --dark-black: #333333;
+  --light-black: #555555;
+  --dark-gray:#777777;
+  --light-gray:#999999;
+  --gloudy-gray:#EEEEEE; 
+
+  /* Object Color */
+  --yellowgreen: #BBD94E;
+  --gold: #F2E635;
+  --beige: #F2E8D5;
+  --lightpink: #F2B999;
+  --crimson: #F2444E;
+  --limegreen: #2ECC71;
+  --royalblue: #346AFF;
+  --turquoise: #72E7E1;
+  --snow: #F5F5F5;
+
+} 

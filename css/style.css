@@ -1,0 +1,24 @@
+/* Import Local CSS */
+@import url("/css/reset.css");
+@import url("/css/variables.css");
+
+/* font-family를 body에 주지 않은 이유는, form 요소(button, input 등)에 적용되지 않기 때문에 전체(*)에 폰트를 정의함 */
+*{
+  font-family: var(--primary-kr);
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+  color: var(--dark-black);
+  line-height: 1.5em;
+  font-size: 14px;
+}
+
+/* #### Common CSS #### */
+
+
+/* #### Preloading html #### */
+
+
+/* #### SignIn html #### */
