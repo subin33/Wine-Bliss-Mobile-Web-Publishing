@@ -19,7 +19,7 @@ body {
 
 /* Layout CSS */
 .container {
-  /* border: 1px solid #000; */
+  border: 1px solid #000;
   width: 375px; /* 작업 완료 후 width: 100%*/
   /* 추후에 gnb를 크기에 맞춰야하기 때문에 미리 relative 선언 */
   /* position: relative; */

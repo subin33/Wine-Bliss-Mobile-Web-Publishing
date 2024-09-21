@@ -1,3 +1,7 @@
+/* Font Icon CDN */
+/* 다음 아이콘은 눈누 폰트 아래에 선언하면 화면에 안나온다. 이유는 모름  그냥 폰트 보다 제일 위에 선언하쟈*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 /* Font Family CDN */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
