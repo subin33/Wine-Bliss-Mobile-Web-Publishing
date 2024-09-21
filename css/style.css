@@ -17,8 +17,47 @@ body {
 
 /* #### Common CSS #### */
 
+/* Layout CSS */
+.container {
+  /* border: 1px solid #000; */
+  width: 375px; /* 작업 완료 후 width: 100%*/
+  /* 추후에 gnb를 크기에 맞춰야하기 때문에 미리 relative 선언 */
+  /* position: relative; */
+}
+
+/* Logo CSS */
+.logo{
+  font-family: var(--logo-en);
+}
 
 /* #### Preloading html #### */
-
+.container.preloading{
+  height: 750px; /* 작업 완료 후 height: 100vh*/
+} 
+.preloading-inner{
+  height: inherit;
+  background: url(/images/preloading-back.jpg) no-repeat center left -140px;
+  background-size: cover;
+  position: relative;
+}
+.heading-preloading{
+  position: absolute;
+  top: 75px;
+  left: 30px;
+}
+.heading-preloading .logo{
+  font-size:32px;
+  color: var(--crimson);
+  /* 기본적으로  white-space: wrap; 가 들어가 있다. 이는 부모요소의 넓이가 부족하면 텍스트의 줄을 바꾸겠다는 의미 */
+  white-space: nowrap;
+}
+.slogan{}
+.slogan span {
+  display: block;
+  font-family: var(--secondary-kr);
+  font-size: 28px;
+  margin: 15px 0;
+  font-weight: bold;
+}
 
 /* #### SignIn html #### */
