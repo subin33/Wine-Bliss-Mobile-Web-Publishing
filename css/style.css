@@ -47,8 +47,8 @@ body {
   height: 65px;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   width: 375px; /* 작업 완료 후 width: 100%*/
   background-color: #fff;
   /* align-items: center; */
@@ -71,6 +71,67 @@ body {
 .gnb a span{
   display: block;
   font-size: 13px;
+}
+
+/* Main Header CSS */
+.main-header {
+  height: 80px;
+  background-color: var(--crimson);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-back{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  flex: 1;
+}
+.main-header .logo {
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  margin: 0;
+  flex: 6;
+}
+.user-alarm{
+  flex: 1;
+  font-size: 22px;
+  color: #fff;
+}
+.user-alarm span{
+  /* border: 1px solid #000; */
+  position: relative;
+}
+.user-alarm span em{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--royalblue);
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  /* 정중앙에 오게 하는 방법 2 - flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-alarm span em::before{
+  content: attr(data-count);
+  font-style: normal;
+  font-size: 10px;
+  font-family: var(--primary-en);
+  /* 정중앙에 오게 하는 방법 1 - position */
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  
+}
+/* div[class*=content]-> 앞에 div나 h2 등을 붙이면 div 중에서 classname 이 content를 포함한것 */
+[class*=content] {
+  padding: 20px;
 }
 
 
@@ -160,10 +221,10 @@ body {
   justify-content: space-between;
 }
 .status label{}
-.status label input[type=checkbox]{
+.custom-chk label input[type=checkbox]{
   display: none;
 }
-.status label input[type=checkbox] + em{
+.custom-chk label input[type=checkbox] + em{
   /* border: 1px solid #000; */
   width: 16px;
   height: 16px;
@@ -171,7 +232,7 @@ body {
   transform: translateY(5px);
   margin-right: 3px;
 }
-.status label input[type=checkbox] + em::before{
+.custom-chk label input[type=checkbox] + em::before{
   content: "\F26B";
   font-family: bootstrap-icons;
   font-style: normal;
@@ -179,7 +240,7 @@ body {
   display: inline-block;
   transform: translateY(-3px);
 }
-.status label input[type=checkbox]:checked + em:before{
+.custom-chk label input[type=checkbox]:checked + em:before{
   color: var(--crimson);
 }
 
@@ -210,3 +271,133 @@ body {
 
 
 /* #### Signup html #### */
+.container.signup {}
+.signup-inner {}
+.signup-content{}
+.signup-field {
+  margin-bottom: 10px;
+}
+.signup-field span{
+  display: block;
+}
+.signup-field span em{
+  color: var(--crimson);
+}
+.signup-field.id-pw input{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--gainsboro);
+  padding: 8px 0;
+}
+.signup-field.id-pw input::placeholder{
+  color: var(--silver-gray);
+}
+.signup-field.birth {}
+.signup-field.birth div {
+  display: flex;
+  gap: 10px;
+}
+/* div > * 를 하면 자식인 option 은 빼고, div * 를 하면 option도 포함 */
+.signup-field.birth div > * ,
+.signup-field.phone div > * {
+  /* flex: 1; -> 이유는 ? 아직 모름 아마도 select 라는 tag가 flex 를 먹지 않는 듯 ?*/
+  width: 33.3333%;
+  border: 1px solid var(--gainsboro);
+  border-radius: 3px;
+  padding: 7px;
+  text-align: center;
+  color: var(--sliver-gray);
+}
+
+.signup-field.phone {}
+.signup-field.phone div {
+  display: flex;
+  gap: 10px;
+}
+.signup-field.phone div input {
+  flex: 7;
+}
+.btn-getcode {
+  flex: 3;
+  background-color: #fff;
+}
+
+.agree-term{
+  margin-bottom: 15px;
+}
+.agree-term label{
+  display: block;
+  font-size: 13px;
+}
+
+.btn-signup {
+  background-color: var(--crimson);
+}
+
+.signup-field.phone span,
+.signup-field.birth span {
+  margin-bottom: 5px;
+}
+
+.signup-field.id-pw input:focus,
+.signup-field.birth div > *:focus,
+.signup-field.phone div input:focus
+ {
+  border-color: var(--yellowgreen);
+}
+
+.signup-field.id-pw input:focus::placeholder,
+.signup-field.birth div > *:focus::placeholder,
+.signup-field.phone div input:focus::placeholder {
+  visibility: hidden;
+}
+
+
+/* #### Category html #### */
+.container.category{}
+.category-inner{}
+.category-content{
+  padding: 0;
+}
+.category-accordion{
+  font-size: 16px;
+}
+.category-accordion .title {
+  border-bottom: 1px solid var(--gloudy-gray);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: var(--crimson);
+  font-weight: 400;
+  /* cursor: pointer; 모바일 버전이라 안넣음 */
+  position: relative;
+  padding: 0 20px;
+}
+.category-accordion .title.active::after{
+  background-color: transparent;
+  transform: rotate(180deg);
+}
+.category-accordion .title:after{
+  content:"\F282";
+  font-family: bootstrap-icons;
+  background-color: var(--fuschia);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 13px;
+  position: absolute;
+  right: 20px;
+  transition: 0.35s;
+}
+.category-accordion .detail {
+  display: none;
+  line-height: 2em;
+  padding: 7px 0;
+  background-color: var(--snow);
+  padding: 0 20px;
+}
+.category-accordion .detail a{
+  display: block;
+  padding: 2px 0;
+}
