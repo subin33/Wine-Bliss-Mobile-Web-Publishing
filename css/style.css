@@ -100,11 +100,13 @@ body {
   font-size: 22px;
   color: #fff;
 }
-.user-alarm span{
+.user-alarm span,
+.cart-alarm b {
   /* border: 1px solid #000; */
   position: relative;
 }
-.user-alarm span em{
+.user-alarm span em,
+.cart-alarm b em{
   position: absolute;
   width: 15px;
   height: 15px;
@@ -117,7 +119,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-.user-alarm span em::before{
+.user-alarm span em::before,
+.cart-alarm b em::before{
   content: attr(data-count);
   font-style: normal;
   font-size: 10px;
@@ -127,13 +130,36 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
-  
 }
+
+.cart-alarm b em{
+  color: #fff;
+  top: 0;
+  right: 22px;
+}
+
 /* div[class*=content]-> 앞에 div나 h2 등을 붙이면 div 중에서 classname 이 content를 포함한것 */
 [class*=content] {
   padding: 20px;
 }
 
+
+/* Clear Buttons */
+.btn-all-clear {
+  border: none;
+  font-size: 11px;
+  background-color: var(--gainsboro);
+  color: #fff;
+  border-radius: 20px;
+  padding: 2px 8px;
+}
+
+.btn-clear {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: var(--silver-gray);
+}
 
 /* #### Preloading html #### */
 .container.preloading{
@@ -401,3 +427,81 @@ body {
   display: block;
   padding: 2px 0;
 }
+
+/* #### Search html #### */
+.container.search {}
+.search-inner {}
+.search-content {}
+.search-field {}
+.search-field input {
+  border: none;
+  padding: 8px;
+  /* background-color: var(--snow); */
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  /* 위에 선언한 background color 가 덮어져 안보이기 때문에 background에 선언 */
+  background: var(--snow) url(/images/icon-search.svg) no-repeat center left 15px;
+  padding-left: 40px;
+}
+
+.search-recent {
+  margin: 25px 0;
+}
+.search-recent .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-recent .title h3 {
+  margin: 0;
+  color: var(--crimson);
+  font-size: 16px;
+}
+
+.search-recent .items {
+  margin: 15px 0;
+}
+.search-recent .items .item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gloudy-gray);
+  padding: 8px 0 ;
+}
+.search-recent .items .item span{
+  font-size: 15px;
+}
+
+.search-increase{}
+.search-increase .title{}
+.search-increase .title h3{
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.search-increase .title p{
+  padding: 0;
+}
+.search-increase-list{
+  /* decimal 을 쓰지 않고 디자인을 할 수 있기 위해 none 으로 */
+  list-style: none;
+  padding-left: 15px;
+  /* counter 로 다음과 같이 디자인을 줄 수 있다. 0 을 뺴고 1 부터 시작 기본값은 0 이지만 알고 있으면 좋아서  */
+  counter-reset: rank 0;
+}
+.search-increase-list li:before{
+  counter-increment: rank;
+  content: counter(rank);
+  margin-right: 10px;
+  font-weight: 500;
+  /* 다음과 같이 배경도 넣을 수 있다. */
+  /* background-color: var(--crimson);
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px; */
+}
+

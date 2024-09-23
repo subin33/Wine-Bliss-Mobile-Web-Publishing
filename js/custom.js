@@ -30,4 +30,15 @@ $(function () {
     $(this).addClass("active");
     $(this).siblings(".category-accordion .title").removeClass("active");
   });
+
+  //Recent Search Result
+  $(".search-recent .btn-clear").click(function () {
+    // $(this).parent().hide();
+    $(this).parent().slideUp(150);
+    // $(this).parent().fadeOut();
+  });
+  $(".search-recent .btn-all-clear").click(function () {
+    // $(".search-recent .item").hide()
+    $(".search-recent .item").slideUp(150);
+  });
 });
