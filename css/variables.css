@@ -30,6 +30,7 @@
   --light-black: #555555;
   --dark-gray:#777777;
   --light-gray:#999999;
+  --silver-gray:#C0C0C0;
   --gloudy-gray:#EEEEEE; 
 
   /* Object Color */
@@ -42,5 +43,5 @@
   --royalblue: #346AFF;
   --turquoise: #72E7E1;
   --snow: #F5F5F5;
-
+  --gainsboro: #DCDCDC;
 } 

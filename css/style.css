@@ -19,16 +19,60 @@ body {
 
 /* Layout CSS */
 .container {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   width: 375px; /* 작업 완료 후 width: 100%*/
   /* 추후에 gnb를 크기에 맞춰야하기 때문에 미리 relative 선언 */
-  /* position: relative; */
+  position: relative;
 }
 
 /* Logo CSS */
 .logo{
   font-family: var(--logo-en);
 }
+
+/* Button CSS */
+.btn-primary {
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  width: 100%;
+  padding: 8px;
+}
+
+/* GNB CSS */
+.gnb{
+  border-top: 1px solid var(--gloudy-gray);
+  /* border: 1px solid #000; */
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 375px; /* 작업 완료 후 width: 100%*/
+  background-color: #fff;
+  /* align-items: center; */
+}
+.gnb a {
+  text-align: center;
+  /* border: 1px solid red; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gnb a .bi{
+  font-size: 22px;
+}
+.gnb a:nth-child(1) .bi,
+.gnb a:nth-child(4) .bi{
+  font-size: 26px;
+}
+.gnb a span{
+  display: block;
+  font-size: 13px;
+}
+
 
 /* #### Preloading html #### */
 .container.preloading{
@@ -61,3 +105,108 @@ body {
 }
 
 /* #### SignIn html #### */
+.container.signin{
+  height: 750px;
+}
+.signin-inner{}
+.signin-photo{
+  height: 250px;
+  background: url(/images/signin-header.jpg) no-repeat;
+}
+.signin-content{
+  padding: 20px;
+}
+.signin-header{
+  text-align: center;
+}
+.signin-header .logo{
+  font-size: 26px;
+  margin-bottom: 0;
+}
+.signin-header p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.signin-field{
+
+}
+.signin-field input {
+  border: 1px solid var(--gainsboro);
+  /* 입력요소에는 height 이렇게 주지 않고 padding을 사용 */
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 30px;
+  margin: 5px 0;
+}
+
+.signin-field input:focus{
+  border-color: var(--yellowgreen);
+}
+
+.signin-field input::placeholder{
+  color: var(--silver-gray);
+  transition: 0.35s;
+}
+
+.signin-field input:focus::placeholder{
+  opacity: 0;
+  /* visibility: hidden; */
+}
+
+.status{
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.status label{}
+.status label input[type=checkbox]{
+  display: none;
+}
+.status label input[type=checkbox] + em{
+  /* border: 1px solid #000; */
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  transform: translateY(5px);
+  margin-right: 3px;
+}
+.status label input[type=checkbox] + em::before{
+  content: "\F26B";
+  font-family: bootstrap-icons;
+  font-style: normal;
+  color: var(--light-gray);
+  display: inline-block;
+  transform: translateY(-3px);
+}
+.status label input[type=checkbox]:checked + em:before{
+  color: var(--crimson);
+}
+
+.btn-signin{
+  background-color: var(--yellowgreen);
+}
+
+.join-member{
+  text-align: center;
+  margin: 15px 0;
+}
+.join-member a{
+  text-decoration: underline;
+}
+
+.easy-signin{
+  text-align: center;
+}
+.easy-signin span{
+  color: var(--light-gray);
+}
+.social-btn{
+  margin: 10px 0;
+}
+.social-btn a{
+  margin: 2px;
+}
+
+
+/* #### Signup html #### */
