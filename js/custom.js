@@ -1,10 +1,10 @@
 // $(function () {}); 는 body 안에 모든 걸 읽어 온 후 에 실행해
 $(function () {
-  // Include html Files
+  /* Include html Files*/
   $(".gnb-include").load("/include/gnb.html");
   $(".main-header-include").load("/include/main-header.html");
 
-  //Category Accordion
+  /* Category Accordion*/
   $(".category-accordion .detail").eq(0).show();
   $(".category-accordion .title").click(function () {
     // 누른 것 모두 펼치기
@@ -31,7 +31,7 @@ $(function () {
     $(this).siblings(".category-accordion .title").removeClass("active");
   });
 
-  //Recent Search Result
+  /* Recent Search Result */
   $(".search-recent .btn-clear").click(function () {
     // $(this).parent().hide();
     $(this).parent().slideUp(150);
@@ -42,11 +42,38 @@ $(function () {
     $(".search-recent .item").slideUp(150);
   });
 
-  // Cart Items
+  /* Cart Items */
   $(".cart-content .btn-all-clear").click(function () {
     $(".cart-item").hide();
   });
   $(".cart-content .btn-clear").click(function () {
     $(this).parent().parent().hide();
+  });
+
+  /* Front Slider */
+  $(".front-slider").slick({
+    slidesToShow: 1 /* 화면에 출력할 슬라이드 개수 */,
+    dots: false /* 하단의 도트 네이게이션 출력 */,
+    arrows: true /* 좌우 화살표 네이게이션 출력 */,
+    autoplay: true /* 자동재생 */,
+    autoplaySpeed: 3000 /* 자동재생 속도 */,
+  });
+
+  /* Goods Suggestion slider*/
+  $(".goods-suggestion-items").slick({
+    slidesToShow: 3,
+    dots: false,
+    arrows: true,
+    slidesToScroll: 2,
+  });
+
+  /* Wish */
+  $(".wish").click(function () {
+    $(this).toggleClass("active");
+  });
+
+  /* Front Footer */
+  $(".btn-view-more").click(function () {
+    $(".company-info-more").show();
   });
 });

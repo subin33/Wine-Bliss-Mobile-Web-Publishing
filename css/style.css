@@ -143,7 +143,6 @@ body {
   padding: 20px;
 }
 
-
 /* Clear Buttons */
 .btn-all-clear {
   border: none;
@@ -159,6 +158,23 @@ body {
   background-color: transparent;
   font-size: 18px;
   color: var(--silver-gray);
+}
+
+/* Badge CSS */
+.badge{
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: var(--primary-en);
+  font-weight: normal;
+  border-radius: 10px;
+  padding: 0 5px;
+  color: #fff;
+}
+.badge.new{
+  background-color: var(--turquoise);
+}
+.badge.hot{
+  background-color: var(--crimson);
 }
 
 /* #### Preloading html #### */
@@ -332,7 +348,7 @@ body {
   border-radius: 3px;
   padding: 7px;
   text-align: center;
-  color: var(--sliver-gray);
+  color: var(--silver-gray);
 }
 
 .signup-field.phone {}
@@ -376,6 +392,315 @@ body {
 .signup-field.birth div > *:focus::placeholder,
 .signup-field.phone div input:focus::placeholder {
   visibility: hidden;
+}
+
+/* #### Front html #### */
+.container.front{}
+.front-inner{}
+.front-content{
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Category Navigation */
+.category-navigation{
+  /* border: 1px solid #000; */
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.category-navigation a{
+  /* border: 1px solid red; */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  font-weight: normal;
+  /* float: left;
+  width: 20%;
+  text-align: center;
+  height: 100%;
+  line-height: 50px; */
+}
+
+.category-navigation a.active{
+  border-bottom:  3px solid var(--crimson);
+  color: var(--crimson);
+}
+/* Front Banner */
+.front .banner a img {
+  width: 100%;
+}
+/* Front Slider */
+.front-slider{
+  /* border: 3px solid red; */
+  height: 275px;
+}
+.front-slider a img{
+  width: 100%;
+}
+/* Slick Slider Custom CSS */
+.front-slider .slick-arrow{
+  z-index: 10000;
+}
+.front-slider .slick-prev{
+  left: 15px;
+}
+.front-slider .slick-next{
+  right: 15px;
+}
+
+.front-slider .slick-prev::before,
+.front-slider .slick-next::before{
+  content: "\F285";
+  font-family: bootstrap-icons;
+  color: #000;
+  zoom:1.5;
+  display: inline-block;
+}
+.front-slider .slick-prev::before{
+  /* before,after는 inline 요소라 transform 작동 x 그래서 inline-block줘야함 */
+  transform: rotateY(180deg);
+}
+
+/* Goods Suggestion */
+.goods-suggestion{
+  padding: 20px;
+}
+.goods-suggestion h2{
+  font-size: 18px;
+  line-height: 1.4em;
+}
+.goods-suggestion h2 span{
+  display: block;
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+.goods-suggestion-items {
+  /* border: 3px solid blue; */
+  width: 430px;
+  margin-bottom: 15px;
+}
+.goods-suggestion-item {}
+.goods-suggestion-item .thum{
+  /* border: 1px solid red; */
+  width: 135px;
+  height: 180px;
+}
+.goods-suggestion-item .thum img{
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.goods-suggestion-item .desc {
+  width: 135px;
+}
+.goods-badge {}
+.goods-title {
+
+}
+.goods-title h3 {
+  font-size: 13px;
+  line-height: 1.2em;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.goods-title div {
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+.goods-title div span {
+  color: var(--crimson);
+}
+.goods-title div b {
+  font-weight: normal;
+
+}
+.goods-title div s {
+  color: var(--silver-gray);
+}
+
+
+.btn-goods-suggestion-more{
+  border: 1px solid var(--crimson);
+  display: block;
+  font-size: 15px;
+  text-align: center;
+  padding: 7px;
+  border-radius: 25px;
+  font-weight: normal;
+}
+
+/* Popular Goods Tabs Menu Content */
+.food-type{
+  margin-top: 20px;
+}
+.food-type-tab-inner{
+}
+input[name=food-type-tabmenu]{
+  display: none;
+}
+.food-type-tab-btn{
+  /* border: 1px solid #000; */
+  height: 40px;
+  background-color: var(--light-beige);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.food-type-tab-btn label{
+  /* border: 1px solid #000; */
+  display: flex;
+  text-align: center;
+}
+
+.food-type-tabs{
+  padding: 20px;
+}
+.food-type-tab{
+  display: none;
+  counter-reset: rank;
+}
+
+
+
+/* Food Type Checked Function */
+input[id=food-type-tab1]:checked ~ .food-type-tab-btn label[for=food-type-tab1],
+input[id=food-type-tab2]:checked ~ .food-type-tab-btn label[for=food-type-tab2],
+input[id=food-type-tab3]:checked ~ .food-type-tab-btn label[for=food-type-tab3],
+input[id=food-type-tab4]:checked ~ .food-type-tab-btn label[for=food-type-tab4],
+input[id=food-type-tab5]:checked ~ .food-type-tab-btn label[for=food-type-tab5],
+input[id=food-type-tab6]:checked ~ .food-type-tab-btn label[for=food-type-tab6]{
+  color: var(--crimson);
+}
+
+input[id=food-type-tab1]:checked ~ .food-type-tabs .tab1,
+input[id=food-type-tab2]:checked ~ .food-type-tabs .tab2,
+input[id=food-type-tab3]:checked ~ .food-type-tabs .tab3,
+input[id=food-type-tab4]:checked ~ .food-type-tabs .tab4,
+input[id=food-type-tab5]:checked ~ .food-type-tabs .tab5,
+input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
+  display: block;
+}
+
+.tab-item{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.tab-item .thum{
+  width: 110px;
+  height: 90px;
+  position: relative;
+}
+.tab-item .thum::before{
+  counter-increment: rank;
+  position: absolute;
+  content: counter(rank);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  border-radius: 5px 0 0 0 ;
+  padding-top: 4px;
+}
+.tab-item .thum img{
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.tab-item .desc{}
+.tab-item .desc .badge-wish{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.wish {
+  /* border: 1px solid #000; */
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+.wish::before {
+  content: "\F417";
+  font-family: bootstrap-icons;
+  color: var(--silver-gray);
+}
+
+.wish.active::before{
+  content: "\F415";
+  color: var(--crimson);
+
+}
+
+.tab-item .goods-title div{
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+/* Front Footer */
+.front-footer{
+  padding: 20px;
+  background-color: var(--gloudy-gray);
+}
+.front-footer > h3{
+  margin-bottom: 0;
+}
+.company-link{
+  margin: 5px 0;
+}
+.company-link a{
+  margin-right: 3px;
+}
+.company-link a::after{
+  content: "|";
+  color: var(--silver-gray);
+  font-size: 10px;
+  padding-left: 10px;
+  display: inline-block;
+  transform: translateY(-2px);
+}
+.company-link a:last-child:after{
+  display: none;
+}
+.company-info-title{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.company-info-title h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.btn-view-more{
+  background-color: transparent;
+  border: none;
+}
+.btn-view-more::after{
+  content: "\F282";
+  font-family: bootstrap-icons;
+  margin-left: 2px;
+  display: inline-block;
+  transform: translateY(2px);
+}
+.company-info-more {
+  display: none;
+}
+
+.company-info-more span{
+  display: block;
 }
 
 
@@ -858,3 +1183,5 @@ body {
   margin-right: 5px;
   width: 2px;
 }
+
+
