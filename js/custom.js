@@ -41,4 +41,12 @@ $(function () {
     // $(".search-recent .item").hide()
     $(".search-recent .item").slideUp(150);
   });
+
+  // Cart Items
+  $(".cart-content .btn-all-clear").click(function () {
+    $(".cart-item").hide();
+  });
+  $(".cart-content .btn-clear").click(function () {
+    $(this).parent().parent().hide();
+  });
 });

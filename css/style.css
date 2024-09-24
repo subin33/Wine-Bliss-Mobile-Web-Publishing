@@ -662,3 +662,199 @@ body {
 .btn-signout{
   background-color: var(--gainsboro);
 }
+
+/* #### Cart html #### */
+.container.cart {}
+.cart-inner {}
+.cart-content {
+  padding: 0;
+}
+.cart-items-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 0;
+}
+.cart-items-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.cart-items {}
+.cart-item {
+  padding: 20px;
+  border-bottom: 1px solid var(--gloudy-gray);
+}
+.cart-item-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.cart-item-title input[type=checkbox] {
+  /* transform: scale(2); */
+  /* zoom: 2; */
+  width: 35px;
+  height: 35px;
+  transform: translateY(-2px);
+
+}
+
+.cart-item-title .btn-clear {
+  transform: translate(8px,-5px);
+  font-size: 20px;
+}
+
+.cart-item-title span {
+  /* border: 1px solid #000; */
+  flex: 1;
+}
+
+.cart-item-desc {
+  display: flex;
+  gap: 10px;
+}
+.cart-item-thum {
+  width: 80px;
+  height: 80px;
+  flex: 1;
+}
+.cart-item-thum img{
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.cart-item-info {
+  flex: 3;
+}
+.cart-item-info span{
+  display: block;
+  /* border: 1px solid #000; */
+}
+.cart-item-info .delivery-date{
+  color: var(--limegreen);
+  font-weight: normal;
+}
+.cart-item-info .delivery-time{
+  margin: 8px 0;
+}
+.cart-item-info .total-price{
+  font-size: 18px;
+  font-weight: normal;
+}
+.cart-item-info .benefit {
+  background-color: rgb(242, 230, 53, 0.4);
+  border-radius: 3px;
+  margin: 10px 0;
+}
+.cart-item-info .benefit em{
+  font-style: normal;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.cart-item-info .benefit em:before{
+  content: "\F26E";
+  font-family: bootstrap-icons;
+  font-size: 16px;
+  display: inline-block;
+  transform: translateY(2px);
+}
+
+/* Custom Select */
+/* 1번째 방법 */
+/* .custom-select{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid var(--gloudy-gray);
+  width: 70px;
+  text-align: center;
+  background: url(/images/icon-carret.svg) no-repeat center right 5px;
+  background-size: 10px;
+  padding: 3px;
+} */
+
+/* 2번째 방법 */
+.custom-select {
+  border: 1px solid var(--gloudy-gray);
+  background-color: var(--snow);
+  /* 1을 수직 중앙으로 보내기 위해, flex를 주고  align-items: center; */
+  display: flex;
+  align-items: center;
+  width: 70px;
+  height: 30px;
+  position: relative;
+}
+.custom-select::after{
+  position: absolute;
+  content: "\F229";
+  font-family: bootstrap-icons;
+  right: 8px;
+  font-size: 12px;
+  top: 5px;
+  border-left: 1px solid var(--gloudy-gray);
+  padding-left: 8px;
+  pointer-events: none;
+}
+.custom-select select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: none;
+  /*input 요소는 흰색으로 color 가 들어가 있기 때문에 transparent 주기 */
+  background-color: transparent;
+  padding-left: 16px;
+}
+
+.cart-items-summary {
+  padding: 20px;
+}
+.cart-items-summary div{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  /* margin-bottom: 10px; 과  margin: 10px 0;는 동일 위아래 마진이 겹피면 더 큰 값을 가져오기 때문, 죄우는 적용 x */
+}
+.cart-items-summary div span{
+  font-size: 15px;
+}
+
+.cart-items-summary div:last-child {
+  border-top: 1px solid var(--gloudy-gray);
+  padding-top: 15px;
+} 
+
+.cart-items-summary div:last-child span:last-child{
+  font-size: 20px;
+}
+.cart-items-summary div span:first-child{
+  font-weight: normal;
+}
+.cart-items-summary div span:last-child{
+  font-weight: 500;
+}
+
+.btn-order{
+  background-color: var(--royalblue);
+  border-radius: 0;
+}
+
+.cart-notice {
+  font-size: 13px;
+  color: var(--light-gray);
+  list-style: none;
+  padding-left: 18px;
+}
+
+.cart-notice  li::before{
+  /* content: "\F2EA"; */
+  /* font-family: bootstrap-icons; */
+  content: "-";
+  margin-right: 5px;
+  width: 2px;
+}
