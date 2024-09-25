@@ -227,6 +227,18 @@ body {
   border: none;
 }
 
+/* Info Badge CSS*/
+.info-badge{
+  font-size: 12px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  padding: 1px 7px;
+}
+.info-badge.arrival{
+  border-color: var(--crimson);
+  color: var(--crimson);
+}
+
 /* #### Preloading html #### */
 .container.preloading{
   height: 750px; /* 작업 완료 후 height: 100vh*/
@@ -891,6 +903,102 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .goods-accordion .title.active::after{
   content: "\F63B";
 }
+
+/* Goods Order Info */
+
+.goods-order-info {
+  /* border: 1px solid #000; */
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 375px;
+  z-index: 1000;
+}
+.goods-order-choice {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.goods-order-final {
+  position: relative;
+  display: none;
+}
+.goods-order-final-info {
+}
+.goods-order-final-info .goods-title{
+  margin: 20px 0;
+}
+.goods-order-final-info .goods-title h3{
+  font-size: 16px;
+}
+.goods-order-final-info .goods-title > div {
+  font-size: 20px;
+  margin-top: 15px;
+  /* align-items: center; */
+}
+
+.btn-fold{
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  position: absolute;
+  top: -15px;
+  /* border: 1px solid #000; */
+  color: var(--light-gray);
+}
+
+.overlay-fold {
+  display: none;
+  position: fixed;
+  width: 375px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.goods-order-choice .wish{
+  font-size: 30px;
+  flex: 1;
+  /* transform: translateY(10px); */
+}
+.btn-order-choice{
+  background-color: var(--royalblue);
+  flex: 6;
+}
+
+.payment-benefit {
+  font-size: 13px;
+  margin: 20px 0;
+}
+.payment-benefit b {
+  font-weight: 400;
+}
+
+.payment-benefit p {
+  color: var(--light-gray);
+  margin: 0;
+}
+.payment-benefit p a{
+  text-decoration: underline;
+}
+.goods-order-btns{
+  display: flex;
+  gap: 10px;
+}
+.btn-cart{
+  border: 1px solid var(--royalblue);
+  color: var(--royalblue);
+  background-color: #fff;
+}
+.btn-now-order{
+  background-color: var(--royalblue);
+}
+
+
 /* #### Category html #### */
 .container.category{}
 .category-inner{}

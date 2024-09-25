@@ -100,4 +100,17 @@ $(function () {
       $(this).next().show();
     }
   });
+
+  /* Goods Order Info */
+  $(".btn-order-choice").click(function () {
+    $(".goods-order-choice").hide();
+    $(".goods-order-final").slideDown(250);
+    $(".overlay-fold").show();
+  });
+
+  $(".btn-fold, .overlay-fold").click(function () {
+    $(".goods-order-choice").show();
+    $(".goods-order-final").slideUp(250);
+    $(".overlay-fold").hide();
+  });
 });
