@@ -3,6 +3,7 @@ $(function () {
   /* Include html Files*/
   $(".gnb-include").load("/include/gnb.html");
   $(".main-header-include").load("/include/main-header.html");
+  $(".goods-detail-header-include").load("/include/goods-detail-header.html");
 
   /* Category Accordion*/
   $(".category-accordion .detail").eq(0).show();
@@ -75,5 +76,28 @@ $(function () {
   /* Front Footer */
   $(".btn-view-more").click(function () {
     $(".company-info-more").show();
+  });
+
+  /* Goods Detail Slider */
+  $(".goods-detail-slider").slick({
+    dots: true,
+    arrows: false,
+    slidesToScroll: 1,
+  });
+
+  /* Goods Accordion */
+  $(".goods-accordion .detail").eq(0).show();
+  $(".goods-accordion .title").click(function () {
+    var isActive = $(this).hasClass("active");
+
+    // 모든 타이틀에서 active 클래스를 제거하고, detail을 숨깁니다.
+    $(".goods-accordion .title").removeClass("active");
+    $(".goods-accordion .detail").hide();
+
+    if (!isActive) {
+      // 클릭한 요소가 active가 아니면 active 클래스를 추가하고 detail을 표시합니다.
+      $(this).addClass("active");
+      $(this).next().show();
+    }
   });
 });
