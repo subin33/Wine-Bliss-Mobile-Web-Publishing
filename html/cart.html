@@ -18,14 +18,23 @@
       <div class="main-header-include"></div>
       <!-- Main Header Include -->
       <div class="cart-content">
-        <div class="cart-items-header">
+        <!-- <div class="cart-items-header">
           <h3>장바구니</h3>
           <button class="btn-all-clear">전체삭제</button>
+        </div> -->
+        <div class="cart-items-header">
+          <h3>장바구니</h3>
+          <div class="cart-items-check-all">
+            <span>
+              <input type="checkbox" class="cart-chk-all" checked>전체선택 <em>2</em>/2
+            </span>
+            <button class="btn-all-clear">전체삭제</button>
+          </div>
         </div>
         <div class="cart-items">
           <div class="cart-item">
             <div class="cart-item-title">
-              <input type="checkbox" checked>
+              <input type="checkbox" class="cart-chk" checked>
               <span>바다향 가득! 해산물 씨키트 해물 스파게티 밀키트(2인) 1300g</span>
               <button class="btn-clear"><i class="bi bi-x"></i></button>
             </div>
@@ -54,7 +63,7 @@
           </div>
           <div class="cart-item">
             <div class="cart-item-title">
-              <input type="checkbox" checked>
+              <input type="checkbox" class="cart-chk" checked>
               <span>HACCP 인증을 받은 닭꼬치 밀키트, 굽기만 하면 끝(10개)</span>
               <button class="btn-clear"><i class="bi bi-x"></i></button>
             </div>
@@ -97,6 +106,9 @@
           </div>
         </div>
         <button class="btn-primary btn-order">2개 상품 주문하기</button>
+        <div class="cart-item-empty">
+          <img src="/images/cart-item-empty.png">
+        </div>
         <ul class="cart-notice">
           <li>장바구니에 담긴 상품은 90일간 보관됩니다.</li>
           <li>실 결제금액은 쿠폰 및 할인 적용에 따라 달라질 수 있습니다.</li>

@@ -44,4 +44,7 @@
   --gainsboro: #DCDCDC; /* 추가된 색상 변수 */
   --fuschia: #FCDDEC; /* 추가된 색상 변수 */
   --light-beige: #F2E8D5; /* 추가된 색상 변수 */
+
+  /* For Big Size Mobile & Tablet Device */
+  --slide-basis: 375px;
 }

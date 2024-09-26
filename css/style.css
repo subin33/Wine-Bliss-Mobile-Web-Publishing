@@ -1,6 +1,7 @@
 /* Import Local CSS */
 @import url("/css/reset.css");
 @import url("/css/variables.css");
+@import url("/css/responsive.css");
 
 /* font-family를 body에 주지 않은 이유는, form 요소(button, input 등)에 적용되지 않기 때문에 전체(*)에 폰트를 정의함 */
 *{
@@ -20,9 +21,14 @@ body {
 /* Layout CSS */
 .container {
   /* border: 1px solid #000; */
-  width: 375px; /* 작업 완료 후 width: 100%*/
+  width: 100%;
   /* 추후에 gnb를 크기에 맞춰야하기 때문에 미리 relative 선언 */
   position: relative;
+}
+.preloading,
+.signin,
+.signup{
+  height: 100vh;
 }
 
 /* Logo CSS */
@@ -47,9 +53,9 @@ body {
   height: 65px;
   display: flex;
   justify-content: space-between;
-  /* position: absolute;
-  bottom: 0; */
-  width: 375px; /* 작업 완료 후 width: 100%*/
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* 작업 완료 후 width: 100%*/
   background-color: #fff;
   /* align-items: center; */
 }
@@ -104,6 +110,8 @@ body {
 .cart-alarm b {
   /* border: 1px solid #000; */
   position: relative;
+  width: 30px;
+  margin: auto;
 }
 .user-alarm span em,
 .cart-alarm b em{
@@ -135,12 +143,13 @@ body {
 .cart-alarm b em{
   color: #fff;
   top: 0;
-  right: 22px;
+  right: -3px;
 }
 
 /* div[class*=content]-> 앞에 div나 h2 등을 붙이면 div 중에서 classname 이 content를 포함한것 */
 [class*=content] {
   padding: 20px;
+  margin-bottom: 65px;
 }
 
 /* Clear Buttons */
@@ -239,10 +248,16 @@ body {
   color: var(--crimson);
 }
 
+/* GNB Navigation Check CSS */
+.category .gnb a:nth-child(1),
+.search .gnb a:nth-child(2),
+.front .gnb a:nth-child(3),
+.mypage .gnb a:nth-child(4),
+.cart .gnb a:nth-child(5){
+  color: var(--crimson);
+}
+
 /* #### Preloading html #### */
-.container.preloading{
-  height: 750px; /* 작업 완료 후 height: 100vh*/
-} 
 .preloading-inner{
   height: inherit;
   background: url(/images/preloading-back.jpg) no-repeat center left -140px;
@@ -498,7 +513,9 @@ body {
 /* Front Slider */
 .front-slider{
   /* border: 3px solid red; */
-  height: 275px;
+  /* height: 275px; */
+  /* height: auto; 는 기본값으로 굳이 선언안해도 된당 */
+  height: auto;
 }
 .front-slider a img{
   width: 100%;
@@ -542,14 +559,14 @@ body {
 }
 .goods-suggestion-items {
   /* border: 3px solid blue; */
-  width: 430px;
+  width: calc(var(--slide-basis)* 1.15);
   margin-bottom: 15px;
 }
 .goods-suggestion-item {}
 .goods-suggestion-item .thum{
   /* border: 1px solid red; */
-  width: 135px;
-  height: 180px;
+  width: calc(var(--slide-basis)* 0.36);
+  height: calc(var(--slide-basis)* 0.48);
 }
 .goods-suggestion-item .thum img{
   width: inherit;
@@ -561,10 +578,23 @@ body {
 .goods-suggestion-item .desc {
   width: 135px;
 }
-.goods-badge {}
-.goods-title {
 
-}
+/* Responsive Suggestion Item */
+/* @media (min-width:400px){
+  .goods-suggestion-items{
+    width: 500px;
+  }
+  .goods-suggestion-item .thum{
+    width: 155px;
+    height: 200px;
+  }
+  .goods-suggestion-item .desc{
+    width: 155px;
+  }
+} */
+
+.goods-badge {}
+.goods-title {}
 .goods-title h3 {
   font-size: 13px;
   line-height: 1.2em;
@@ -914,7 +944,7 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   padding: 15px;
   position: fixed;
   bottom: 0;
-  width: 375px;
+  width: 100%;
   z-index: 1000;
 }
 .goods-order-choice {
@@ -1289,16 +1319,46 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .cart-content {
   padding: 0;
 }
-.cart-items-header {
+
+/* .cart-items-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   padding-bottom: 0;
+} */
+
+/* 장바구니 전체 선택 추가 후 변경 */
+.cart-items-header {
+  padding: 20px;
 }
+
 .cart-items-header h3 {
   margin: 0;
   font-size: 16px;
+  margin-bottom: 10px;
+}
+.cart-items-check-all {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gloudy-gray);
+  padding-bottom: 10px;
+}
+.cart-items-check-all .cart-chk-all{
+  width: 18px;
+  height: 18px;
+  transform: translateY(4px);
+  margin-right: 5px;
+  accent-color: var(--crimson);
+}
+.cart-items-check-all em{
+  font-style: normal;
+  color: var(--crimson);
+}
+.cart-item-empty{
+  text-align: center;
+  padding: 50px 0;
+  display: none;
 }
 .cart-items {}
 .cart-item {
@@ -1478,6 +1538,9 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   margin-right: 5px;
   width: 2px;
 }
+
+
+
 
 
 

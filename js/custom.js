@@ -44,11 +44,43 @@ $(function () {
   });
 
   /* Cart Items */
-  $(".cart-content .btn-all-clear").click(function () {
-    $(".cart-item").hide();
-  });
+  // $(".cart-content .btn-all-clear").click(function () {
+  //   $(".cart-item").hide();
+  // });
+  // $(".cart-content .btn-clear").click(function () {
+  //   $(this).parent().parent().hide();
+  // });
+
+  /* Cart Item Empty */
   $(".cart-content .btn-clear").click(function () {
-    $(this).parent().parent().hide();
+    $(this).parent().parent().remove();
+    if ($(".cart-item").length === 0) {
+      $(".cart-item-empty").show();
+      $(".cart-items-check-all").hide();
+      $(".cart-items-summary").hide();
+      $(".btn-primary.btn-order").hide();
+    }
+  });
+  $(".cart-content .btn-all-clear").click(function () {
+    $(".cart-item").remove();
+    if ($(".cart-item").length === 0) {
+      $(".cart-item-empty").show();
+      $(".cart-items-check-all").hide();
+      $(".cart-items-summary").hide();
+      $(".btn-primary.btn-order").hide();
+    }
+  });
+
+  /* Cart Check All */
+  // 전체 선택/해제 체크박스 클릭 시 모든 .cart-chk 체크박스를 선택/해제
+  $(".cart-chk-all").click(function () {
+    $(".cart-chk").prop("checked", this.checked);
+  });
+
+  // 각 개별 체크박스(.cart-chk) 상태 변경 시 전체 선택 체크박스의 상태도 변경
+  $(".cart-chk").click(function () {
+    var allChecked = $(".cart-chk").length === $(".cart-chk:checked").length;
+    $(".cart-chk-all").prop("checked", allChecked);
   });
 
   /* Front Slider */

@@ -1,0 +1,12 @@
+  /* For Big Size Mobile & Tablet Device */
+  @media(min-width:400px){
+    :root {
+      --slide-basis: 420px;
+    }
+  }
+
+  @media (min-width: 768px)and (max-width:1024px){
+    :root {
+      --slide-basis: 800px;
+    }
+  }
