@@ -926,6 +926,9 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .goods-accordion .detail{
   display: none;
 }
+.goods-accordion .detail img {
+  width: 100%;
+}
 .goods-accordion .title.active{
   color: var(--crimson);
   background-color: var(--snow);
