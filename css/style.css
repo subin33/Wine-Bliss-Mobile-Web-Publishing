@@ -279,7 +279,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(/images/preloading-back.jpg) no-repeat center left -140px;
+  background: url(/images/preloading-back.jpg) no-repeat center left -100px;
   background-size: cover;
   filter: brightness(0.7); /* 이미지에만 적용될 흐림 효과 */
   z-index: -1; /* 배경 이미지가 텍스트 뒤에 있도록 설정 */
