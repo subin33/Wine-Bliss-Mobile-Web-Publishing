@@ -11,6 +11,7 @@
       const mobileList = ["Android", "iPhone", "iPad", "BlackBerry", "Windows Phone", "Samsung", "LG"," Window CE", "SonyEricsson", "Nokia"];
 
       for(let i in mobileList){
+        alert(navigator.userAgent)
         if(navigator.userAgent.match(mobileList[i])) {
           location.href = "/html/preloading.html"
         }else{
