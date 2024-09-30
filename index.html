@@ -8,24 +8,14 @@
 <body>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const mobileList = ["Android", "iPhone", "iPad", "BlackBerry", "Windows Phone", "Samsung", "LG", "Windows CE", "SonyEricsson", "Nokia"];
-      
-      // userAgent 값을 alert로 확인
-      alert(navigator.userAgent);
-
-      let isMobile = false;
-
-      for (let device of mobileList) {
-        if (navigator.userAgent.match(device)) {
-          isMobile = true;
-          break; // 모바일 기기 발견 시 바로 중단
-        }
-      }
+      const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|Windows Phone|Samsung|LG|SonyEricsson|Nokia/i.test(navigator.userAgent);
 
       if (isMobile) {
-        location.href = "/html/preloading.html"; // 모바일 기기로 접속했을 때
+        // 모바일 기기로 접속했을 때
+        location.href = "/html/preloading.html";
       } else {
-        location.href = "/mobile-mockup/single-view.html"; // 데스크탑 등 모바일 기기가 아닐 때
+        // 데스크탑 등 모바일 기기가 아닐 때
+        location.href = "/mobile-mockup/single-view.html";
       }
     });
   </script>
