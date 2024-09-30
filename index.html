@@ -8,16 +8,15 @@
 <body>
   <script>
     document.addEventListener('DOMContentLoaded',()=>{
-       location.href = "/html/preloading.html"
-      // const mobileList = ["Android", "iPhone", "iPad", "BlackBerry", "Windows Phone", "Samsung", "LG"," Window CE", "SonyEricsson", "Nokia"];
+      const mobileList = ["Android", "iPhone", "iPad", "BlackBerry", "Windows Phone", "Samsung", "LG"," Window CE", "SonyEricsson", "Nokia"];
 
-      // for(let i in mobileList){
-      //   if(navigator.userAgent.match(mobileList[i])) {
-      //     location.href = "/html/preloading.html"
-      //   }else{
-      //     location.href = "/mobile-mockup/single-view.html";
-      //   }
-      // }
+      for(let i in mobileList){
+        if(navigator.userAgent.match(mobileList[i])) {
+          location.href = "/html/preloading.html"
+        }else{
+          location.href = "/mobile-mockup/single-view.html";
+        }
+      }
     })
   </script>
 </body>
