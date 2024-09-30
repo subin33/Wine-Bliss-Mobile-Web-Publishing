@@ -21,7 +21,8 @@ body {
 /* Layout CSS */
 .container {
   /* border: 1px solid #000; */
-  width: 100%;
+    /* width: 100%; */
+    width: 375px;
   /* 추후에 gnb를 크기에 맞춰야하기 때문에 미리 relative 선언 */
   position: relative;
 }
@@ -42,7 +43,8 @@ body {
   border: none;
   border-radius: 5px;
   color: #fff;
-  width: 100%;
+    /* width: 100%; */
+  width: 375px;
   padding: 8px;
 }
 
@@ -55,7 +57,8 @@ body {
   justify-content: space-between;
   position: fixed;
   bottom: 0;
-  width: 100%; /* 작업 완료 후 width: 100%*/
+    /* width: 100%; */
+    width: 375px; /* 작업 완료 후 width: 100%*/
   background-color: #fff;
   /* align-items: center; */
 }
@@ -82,7 +85,7 @@ body {
 /* Main Header CSS */
 .main-header {
   height: 80px;
-  background-color: var(--crimson);
+  background-color: var(--deep-red);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -258,27 +261,47 @@ body {
 }
 
 /* #### Preloading html #### */
-.preloading-inner{
+/* .preloading-inner{
   height: inherit;
   background: url(/images/preloading-back.jpg) no-repeat center left -140px;
   background-size: cover;
   position: relative;
+} */
+.preloading-inner {
+  height: inherit;
+  position: relative;
+}
+
+.preloading-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(/images/preloading-back.jpg) no-repeat center left -140px;
+  background-size: cover;
+  filter: brightness(0.7); /* 이미지에만 적용될 흐림 효과 */
+  z-index: -1; /* 배경 이미지가 텍스트 뒤에 있도록 설정 */
 }
 .heading-preloading{
   position: absolute;
-  top: 75px;
-  left: 30px;
+  top: 40%;
+  left: 10%;
+  transform: translate(-10%,-50%);
 }
 .heading-preloading .logo{
-  font-size:32px;
-  color: var(--crimson);
+  font-size:40px;
+  color: var(--snow);
   /* 기본적으로  white-space: wrap; 가 들어가 있다. 이는 부모요소의 넓이가 부족하면 텍스트의 줄을 바꾸겠다는 의미 */
   white-space: nowrap;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
 }
 .slogan{}
 .slogan span {
   display: block;
   font-family: var(--secondary-kr);
+  color: var(--snow);
   font-size: 28px;
   margin: 15px 0;
   font-weight: bold;
@@ -291,7 +314,8 @@ body {
 .signin-inner{}
 .signin-photo{
   height: 250px;
-  background: url(/images/signin-header.jpg) no-repeat;
+  background: url(/images/signin-header_2.jpg) no-repeat;
+  background-size: cover;
 }
 .signin-content{
   padding: 20px;
@@ -364,7 +388,7 @@ body {
 }
 
 .btn-signin{
-  background-color: var(--yellowgreen);
+  background-color: var(--dark-green);
 }
 
 .join-member{
@@ -525,10 +549,10 @@ body {
   z-index: 10000;
 }
 .front-slider .slick-prev{
-  left: 15px;
+  left: 10px;
 }
 .front-slider .slick-next{
-  right: 15px;
+  right: 10px;
 }
 
 .front-slider .slick-prev::before,
@@ -896,14 +920,35 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 
 /* Goods Detail */
 .goods-info-section{
-  padding: 20px;
+  padding: 0px;
+  overflow: hidden; 
 }
 .goods-info-section img {
   width: 100%;
+  transform: scale(1.1); 
+  transform-origin: center; 
+
 }
-.goods-info-section p {
-  /* padding: 20px; */
-  text-align: center;
+
+/* Review */
+.review-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 15px;
+}
+.review-item:last-child {
+  border-bottom: none;
+}
+.review-stars {
+  color: #bcbcbc; /* 별 색상 */
+}
+.review-text {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.review-user {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #999;
 }
 
 /* Goods Accordion */
@@ -927,7 +972,9 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   display: none;
 }
 .goods-accordion .detail img {
-  width: 100%;
+  /* width: 100%; */
+  width: 375px;
+
 }
 .goods-accordion .title.active{
   color: var(--crimson);
@@ -947,7 +994,8 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   padding: 15px;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  /* width: 100%; */
+  width: 375px;
   z-index: 1000;
 }
 .goods-order-choice {
@@ -977,7 +1025,8 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .btn-fold{
   background-color: transparent;
   border: none;
-  width: 100%;
+  /* width: 100%; */
+  width: 375px;
   position: absolute;
   top: -15px;
   /* border: 1px solid #000; */
@@ -1178,6 +1227,7 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 }
 .user-avatar img{
   width: 60px;
+  height: 65px;
   border-radius: 50%;
 }
 .user-summary {
@@ -1279,7 +1329,8 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 }
 
 .mypage .banner a img{
-  width: 100%;
+   /* width: 100%; */
+   width: 375px;
 }
 .user-shortcut{}
 .user-shortcut a{
@@ -1523,7 +1574,7 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 }
 
 .btn-order{
-  background-color: var(--royalblue);
+  background-color: var(--deep-red);
   border-radius: 0;
 }
 

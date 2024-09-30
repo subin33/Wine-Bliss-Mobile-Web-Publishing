@@ -8,6 +8,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
 @font-face {
   font-family: 'NEXON Lv2 Gothic';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
@@ -15,12 +17,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MaruBuri';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
+}
+
 
 :root {
   /* Font Family */
-  --primary-kr: 'Noto Sans KR', sans-serif;
+  /* --primary-kr: 'Noto Sans KR', sans-serif; */
+  /* --primary-kr: 'MaruBuri'; */
   --primary-en: 'Roboto', sans-serif;
-  --logo-en: 'Bree Serif', serif;
+  /* --logo-en: 'Bree Serif', serif; */
+  --logo-en:"Yeseva One", serif;
   --secondary-kr: 'NEXON Lv2 Gothic';
 
   /* Text Color */
@@ -33,6 +43,8 @@
 
   /* Object Color */
   --yellowgreen: #BBD94E;
+  --dark-green:#2F4F4F;
+  --deep-red:#800020;
   --gold: #F2E635;
   --beige: #F2E8D5;
   --lightpink: #F2B999;
