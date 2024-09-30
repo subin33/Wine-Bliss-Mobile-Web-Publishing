@@ -7,17 +7,18 @@
 </head>
 <body>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|Windows Phone|Samsung|LG|SonyEricsson|Nokia/i.test(navigator.userAgent);
+    document.addEventListener('DOMContentLoaded',()=>{
+       location.href = "/html/preloading.html"
+      // const mobileList = ["Android", "iPhone", "iPad", "BlackBerry", "Windows Phone", "Samsung", "LG"," Window CE", "SonyEricsson", "Nokia"];
 
-      if (isMobile) {
-        // 모바일 기기로 접속했을 때
-        location.href = "/html/preloading.html";
-      } else {
-        // 데스크탑 등 모바일 기기가 아닐 때
-        location.href = "/mobile-mockup/single-view.html";
-      }
-    });
+      // for(let i in mobileList){
+      //   if(navigator.userAgent.match(mobileList[i])) {
+      //     location.href = "/html/preloading.html"
+      //   }else{
+      //     location.href = "/mobile-mockup/single-view.html";
+      //   }
+      // }
+    })
   </script>
 </body>
 </html>
