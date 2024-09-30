@@ -21,8 +21,8 @@ body {
 /* Layout CSS */
 .container {
   /* border: 1px solid #000; */
-    /* width: 100%; */
-    width: 375px;
+    width: 100%;
+    /* width: 375px; */
   /* 추후에 gnb를 크기에 맞춰야하기 때문에 미리 relative 선언 */
   position: relative;
 }
@@ -43,8 +43,8 @@ body {
   border: none;
   border-radius: 5px;
   color: #fff;
-    /* width: 100%; */
-  width: 375px;
+    width: 100%;
+  /* width: 375px; */
   padding: 8px;
 }
 
@@ -57,8 +57,8 @@ body {
   justify-content: space-between;
   position: fixed;
   bottom: 0;
-    /* width: 100%; */
-    width: 375px; /* 작업 완료 후 width: 100%*/
+    width: 100%;
+    /* width: 375px; 작업 완료 후 width: 100% */
   background-color: #fff;
   /* align-items: center; */
 }
@@ -972,8 +972,7 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   display: none;
 }
 .goods-accordion .detail img {
-  /* width: 100%; */
-  width: 375px;
+  width: 100%;
 
 }
 .goods-accordion .title.active{
@@ -994,8 +993,8 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   padding: 15px;
   position: fixed;
   bottom: 0;
-  /* width: 100%; */
-  width: 375px;
+  width: 100%;
+  /* width: 375px; */
   z-index: 1000;
 }
 .goods-order-choice {
@@ -1025,8 +1024,8 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .btn-fold{
   background-color: transparent;
   border: none;
-  /* width: 100%; */
-  width: 375px;
+  width: 100%;
+  /* width: 375px; */
   position: absolute;
   top: -15px;
   /* border: 1px solid #000; */
@@ -1036,7 +1035,7 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .overlay-fold {
   display: none;
   position: fixed;
-  width: 375px;
+  width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
@@ -1329,8 +1328,8 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 }
 
 .mypage .banner a img{
-   /* width: 100%; */
-   width: 375px;
+   width: 100%;
+   /* width: 375px; */
 }
 .user-shortcut{}
 .user-shortcut a{
