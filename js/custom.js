@@ -145,4 +145,12 @@ $(function () {
     $(".goods-order-final").slideUp(250);
     $(".overlay-fold").hide();
   });
+
+  $(".btn-signup").click(function () {
+    window.location.href = "signin.html";
+  });
+
+  $(".btn-signin").click(function () {
+    window.location.href = "front.html";
+  });
 });
