@@ -4,7 +4,7 @@
 @import url("/css/responsive.css");
 
 /* font-family를 body에 주지 않은 이유는, form 요소(button, input 등)에 적용되지 않기 때문에 전체(*)에 폰트를 정의함 */
-*{
+* {
   font-family: var(--primary-kr);
   font-weight: 300;
 }
@@ -21,19 +21,19 @@ body {
 /* Layout CSS */
 .container {
   /* border: 1px solid #000; */
-    width: 100%;
-    /* width: 375px; */
+  width: 100%;
+  /* width: 375px; */
   /* 추후에 gnb를 크기에 맞춰야하기 때문에 미리 relative 선언 */
   position: relative;
 }
 .preloading,
 .signin,
-.signup{
+.signup {
   height: 100vh;
 }
 
 /* Logo CSS */
-.logo{
+.logo {
   font-family: var(--logo-en);
 }
 
@@ -43,13 +43,13 @@ body {
   border: none;
   border-radius: 5px;
   color: #fff;
-    width: 100%;
+  width: 100%;
   /* width: 375px; */
   padding: 8px;
 }
 
 /* GNB CSS */
-.gnb{
+.gnb {
   border-top: 1px solid var(--gloudy-gray);
   /* border: 1px solid #000; */
   height: 65px;
@@ -57,8 +57,8 @@ body {
   justify-content: space-between;
   position: fixed;
   bottom: 0;
-    width: 100%;
-    /* width: 375px; 작업 완료 후 width: 100% */
+  width: 100%;
+  /* width: 375px; 작업 완료 후 width: 100% */
   background-color: #fff;
   /* align-items: center; */
 }
@@ -70,14 +70,14 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.gnb a .bi{
+.gnb a .bi {
   font-size: 22px;
 }
 .gnb a:nth-child(1) .bi,
-.gnb a:nth-child(4) .bi{
+.gnb a:nth-child(4) .bi {
   font-size: 26px;
 }
-.gnb a span{
+.gnb a span {
   display: block;
   font-size: 13px;
 }
@@ -90,7 +90,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.btn-back{
+.btn-back {
   background-color: transparent;
   border: none;
   color: #fff;
@@ -104,7 +104,7 @@ body {
   margin: 0;
   flex: 6;
 }
-.user-alarm{
+.user-alarm {
   flex: 1;
   font-size: 22px;
   color: #fff;
@@ -117,7 +117,7 @@ body {
   margin: auto;
 }
 .user-alarm span em,
-.cart-alarm b em{
+.cart-alarm b em {
   position: absolute;
   width: 15px;
   height: 15px;
@@ -131,7 +131,7 @@ body {
   align-items: center;
 }
 .user-alarm span em::before,
-.cart-alarm b em::before{
+.cart-alarm b em::before {
   content: attr(data-count);
   font-style: normal;
   font-size: 10px;
@@ -143,14 +143,14 @@ body {
   transform: translate(-50%, -50%); */
 }
 
-.cart-alarm b em{
+.cart-alarm b em {
   color: #fff;
   top: 0;
   right: -3px;
 }
 
 /* div[class*=content]-> 앞에 div나 h2 등을 붙이면 div 중에서 classname 이 content를 포함한것 */
-[class*=content] {
+[class*="content"] {
   padding: 20px;
   margin-bottom: 65px;
 }
@@ -173,7 +173,7 @@ body {
 }
 
 /* Badge CSS */
-.badge{
+.badge {
   font-size: 10px;
   text-transform: uppercase;
   font-family: var(--primary-en);
@@ -182,15 +182,15 @@ body {
   padding: 0 5px;
   color: #fff;
 }
-.badge.new{
+.badge.new {
   background-color: var(--turquoise);
 }
-.badge.hot{
+.badge.hot {
   background-color: var(--crimson);
 }
 
 /* Goods Detail Header CSS */
-.goods-detail-header{
+.goods-detail-header {
   /* border: 1px solid red; */
   height: 75px;
   display: flex;
@@ -200,21 +200,21 @@ body {
 /* .goods-detail-header > * {
   border: 1px solid #000;
 } */
-.goods-detail-header .back-logo{
+.goods-detail-header .back-logo {
   display: flex;
   align-items: center;
 }
-.goods-detail-header .btn-back{
+.goods-detail-header .btn-back {
   color: #000;
 }
-.goods-detail-header .back-logo .logo{
+.goods-detail-header .back-logo .logo {
   margin: 0;
   font-size: 24px;
 }
-.goods-detail-header .navigator{
+.goods-detail-header .navigator {
   margin-right: 10px;
 }
-.goods-detail-header .navigator button{
+.goods-detail-header .navigator button {
   border: none;
   background-color: transparent;
   font-size: 24px;
@@ -227,7 +227,7 @@ body {
 }
 
 /* Button Share */
-.btn-share{
+.btn-share {
   position: absolute;
   right: 20px;
   bottom: 20px;
@@ -240,13 +240,13 @@ body {
 }
 
 /* Info Badge CSS*/
-.info-badge{
+.info-badge {
   font-size: 12px;
   border: 1px solid #000;
   border-radius: 15px;
   padding: 1px 7px;
 }
-.info-badge.arrival{
+.info-badge.arrival {
   border-color: var(--crimson);
   color: var(--crimson);
 }
@@ -256,7 +256,7 @@ body {
 .search .gnb a:nth-child(2),
 .front .gnb a:nth-child(3),
 .mypage .gnb a:nth-child(4),
-.cart .gnb a:nth-child(5){
+.cart .gnb a:nth-child(5) {
   color: var(--crimson);
 }
 
@@ -273,7 +273,7 @@ body {
 }
 
 .preloading-inner::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -284,20 +284,20 @@ body {
   filter: brightness(0.7); /* 이미지에만 적용될 흐림 효과 */
   z-index: -1; /* 배경 이미지가 텍스트 뒤에 있도록 설정 */
 }
-.heading-preloading{
+.heading-preloading {
   position: absolute;
   top: 40%;
   left: 10%;
-  transform: translate(-10%,-50%);
+  transform: translate(-10%, -50%);
 }
-.heading-preloading .logo{
-  font-size:40px;
+.heading-preloading .logo {
+  font-size: 40px;
   color: var(--snow);
   /* 기본적으로  white-space: wrap; 가 들어가 있다. 이는 부모요소의 넓이가 부족하면 텍스트의 줄을 바꾸겠다는 의미 */
   white-space: nowrap;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-.slogan{}
+
 .slogan span {
   display: block;
   font-family: var(--secondary-kr);
@@ -308,22 +308,22 @@ body {
 }
 
 /* #### SignIn html #### */
-.container.signin{
+.container.signin {
   height: 750px;
 }
-.signin-inner{}
-.signin-photo{
+
+.signin-photo {
   height: 250px;
   background: url(/images/signin-header_2.jpg) no-repeat;
   background-size: cover;
 }
-.signin-content{
+.signin-content {
   padding: 20px;
 }
-.signin-header{
+.signin-header {
   text-align: center;
 }
-.signin-header .logo{
+.signin-header .logo {
   font-size: 26px;
   margin-bottom: 0;
 }
@@ -332,9 +332,6 @@ body {
   font-weight: 400;
 }
 
-.signin-field{
-
-}
 .signin-field input {
   border: 1px solid var(--gainsboro);
   /* 입력요소에는 height 이렇게 주지 않고 padding을 사용 */
@@ -344,30 +341,30 @@ body {
   margin: 5px 0;
 }
 
-.signin-field input:focus{
+.signin-field input:focus {
   border-color: var(--yellowgreen);
 }
 
-.signin-field input::placeholder{
+.signin-field input::placeholder {
   color: var(--silver-gray);
   transition: 0.35s;
 }
 
-.signin-field input:focus::placeholder{
+.signin-field input:focus::placeholder {
   opacity: 0;
   /* visibility: hidden; */
 }
 
-.status{
+.status {
   margin: 15px 0;
   display: flex;
   justify-content: space-between;
 }
-.status label{}
-.custom-chk label input[type=checkbox]{
+
+.custom-chk label input[type="checkbox"] {
   display: none;
 }
-.custom-chk label input[type=checkbox] + em{
+.custom-chk label input[type="checkbox"] + em {
   /* border: 1px solid #000; */
   width: 16px;
   height: 16px;
@@ -375,7 +372,7 @@ body {
   transform: translateY(5px);
   margin-right: 3px;
 }
-.custom-chk label input[type=checkbox] + em::before{
+.custom-chk label input[type="checkbox"] + em::before {
   content: "\F26B";
   font-family: bootstrap-icons;
   font-style: normal;
@@ -383,65 +380,61 @@ body {
   display: inline-block;
   transform: translateY(-3px);
 }
-.custom-chk label input[type=checkbox]:checked + em:before{
+.custom-chk label input[type="checkbox"]:checked + em:before {
   color: var(--crimson);
 }
 
-.btn-signin{
+.btn-signin {
   background-color: var(--dark-green);
 }
 
-.join-member{
+.join-member {
   text-align: center;
   margin: 15px 0;
 }
-.join-member a{
+.join-member a {
   text-decoration: underline;
 }
 
-.easy-signin{
+.easy-signin {
   text-align: center;
 }
-.easy-signin span{
+.easy-signin span {
   color: var(--light-gray);
 }
-.social-btn{
+.social-btn {
   margin: 10px 0;
 }
-.social-btn a{
+.social-btn a {
   margin: 2px;
 }
 
-
 /* #### Signup html #### */
-.container.signup {}
-.signup-inner {}
-.signup-content{}
 .signup-field {
   margin-bottom: 10px;
 }
-.signup-field span{
+.signup-field span {
   display: block;
 }
-.signup-field span em{
+.signup-field span em {
   color: var(--crimson);
 }
-.signup-field.id-pw input{
+.signup-field.id-pw input {
   width: 100%;
   border: none;
   border-bottom: 1px solid var(--gainsboro);
   padding: 8px 0;
 }
-.signup-field.id-pw input::placeholder{
+.signup-field.id-pw input::placeholder {
   color: var(--silver-gray);
 }
-.signup-field.birth {}
+
 .signup-field.birth div {
   display: flex;
   gap: 10px;
 }
 /* div > * 를 하면 자식인 option 은 빼고, div * 를 하면 option도 포함 */
-.signup-field.birth div > * ,
+.signup-field.birth div > *,
 .signup-field.phone div > * {
   /* flex: 1; -> 이유는 ? 아직 모름 아마도 select 라는 tag가 flex 를 먹지 않는 듯 ?*/
   width: 33.3333%;
@@ -452,7 +445,8 @@ body {
   color: var(--silver-gray);
 }
 
-.signup-field.phone {}
+.signup-field.phone {
+}
 .signup-field.phone div {
   display: flex;
   gap: 10px;
@@ -465,10 +459,10 @@ body {
   background-color: #fff;
 }
 
-.agree-term{
+.agree-term {
   margin-bottom: 15px;
 }
-.agree-term label{
+.agree-term label {
   display: block;
   font-size: 13px;
 }
@@ -484,8 +478,7 @@ body {
 
 .signup-field.id-pw input:focus,
 .signup-field.birth div > *:focus,
-.signup-field.phone div input:focus
- {
+.signup-field.phone div input:focus {
   border-color: var(--yellowgreen);
 }
 
@@ -496,21 +489,23 @@ body {
 }
 
 /* #### Front html #### */
-.container.front{}
-.front-inner{}
-.front-content{
+.container.front {
+}
+.front-inner {
+}
+.front-content {
   padding: 0;
   overflow-x: hidden;
 }
 
 /* Category Navigation */
-.category-navigation{
+.category-navigation {
   /* border: 1px solid #000; */
   height: 50px;
   display: flex;
   justify-content: space-between;
 }
-.category-navigation a{
+.category-navigation a {
   /* border: 1px solid red; */
   flex: 1;
   display: flex;
@@ -526,8 +521,8 @@ body {
   line-height: 50px; */
 }
 
-.category-navigation a.active{
-  border-bottom:  3px solid var(--crimson);
+.category-navigation a.active {
+  border-bottom: 3px solid var(--crimson);
   color: var(--crimson);
 }
 /* Front Banner */
@@ -535,64 +530,65 @@ body {
   width: 100%;
 }
 /* Front Slider */
-.front-slider{
+.front-slider {
   /* border: 3px solid red; */
   /* height: 275px; */
   /* height: auto; 는 기본값으로 굳이 선언안해도 된당 */
   height: auto;
 }
-.front-slider a img{
+.front-slider a img {
   width: 100%;
 }
 /* Slick Slider Custom CSS */
-.front-slider .slick-arrow{
+.front-slider .slick-arrow {
   z-index: 10000;
 }
-.front-slider .slick-prev{
+.front-slider .slick-prev {
   left: 10px;
 }
-.front-slider .slick-next{
+.front-slider .slick-next {
   right: 10px;
 }
 
 .front-slider .slick-prev::before,
-.front-slider .slick-next::before{
+.front-slider .slick-next::before {
   content: "\F285";
   font-family: bootstrap-icons;
   color: #000;
-  zoom:1.5;
+  zoom: 1.5;
   display: inline-block;
 }
-.front-slider .slick-prev::before{
+.front-slider .slick-prev::before {
   /* before,after는 inline 요소라 transform 작동 x 그래서 inline-block줘야함 */
   transform: rotateY(180deg);
 }
 
 /* Goods Suggestion */
-.goods-suggestion{
+.goods-suggestion {
   padding: 20px;
 }
-.goods-suggestion h2{
+.goods-suggestion h2 {
   font-size: 18px;
   line-height: 1.4em;
 }
-.goods-suggestion h2 span{
+.goods-suggestion h2 span {
   display: block;
   font-size: 14px;
   color: var(--dark-gray);
 }
 .goods-suggestion-items {
   /* border: 3px solid blue; */
-  width: calc(var(--slide-basis)* 1.15);
+  width: calc(var(--slide-basis) * 1.15);
   margin-bottom: 15px;
 }
-.goods-suggestion-item {}
-.goods-suggestion-item .thum{
-  /* border: 1px solid red; */
-  width: calc(var(--slide-basis)* 0.36);
-  height: calc(var(--slide-basis)* 0.48);
+.goods-suggestion-item {
 }
-.goods-suggestion-item .thum img{
+.goods-suggestion-item .thum {
+  /* border: 1px solid red; */
+  width: calc(var(--slide-basis) * 0.36);
+  height: calc(var(--slide-basis) * 0.48);
+}
+.goods-suggestion-item .thum img {
   width: inherit;
   height: inherit;
   object-fit: cover;
@@ -603,22 +599,6 @@ body {
   width: 135px;
 }
 
-/* Responsive Suggestion Item */
-/* @media (min-width:400px){
-  .goods-suggestion-items{
-    width: 500px;
-  }
-  .goods-suggestion-item .thum{
-    width: 155px;
-    height: 200px;
-  }
-  .goods-suggestion-item .desc{
-    width: 155px;
-  }
-} */
-
-.goods-badge {}
-.goods-title {}
 .goods-title h3 {
   font-size: 13px;
   line-height: 1.2em;
@@ -635,14 +615,12 @@ body {
 }
 .goods-title div b {
   font-weight: normal;
-
 }
 .goods-title div s {
   color: var(--silver-gray);
 }
 
-
-.btn-goods-suggestion-more{
+.btn-goods-suggestion-more {
   border: 1px solid var(--crimson);
   display: block;
   font-size: 15px;
@@ -653,15 +631,14 @@ body {
 }
 
 /* Popular Goods Tabs Menu Content */
-.food-type{
+.food-type {
   margin-top: 20px;
 }
-.food-type-tab-inner{
-}
-input[name=food-type-tabmenu]{
+
+input[name="food-type-tabmenu"] {
   display: none;
 }
-.food-type-tab-btn{
+.food-type-tab-btn {
   /* border: 1px solid #000; */
   height: 40px;
   background-color: var(--light-beige);
@@ -669,52 +646,50 @@ input[name=food-type-tabmenu]{
   justify-content: space-between;
   align-items: center;
 }
-.food-type-tab-btn label{
+.food-type-tab-btn label {
   /* border: 1px solid #000; */
   display: flex;
   text-align: center;
 }
 
-.food-type-tabs{
+.food-type-tabs {
   padding: 20px;
 }
-.food-type-tab{
+.food-type-tab {
   display: none;
   counter-reset: rank;
 }
 
-
-
 /* Food Type Checked Function */
-input[id=food-type-tab1]:checked ~ .food-type-tab-btn label[for=food-type-tab1],
-input[id=food-type-tab2]:checked ~ .food-type-tab-btn label[for=food-type-tab2],
-input[id=food-type-tab3]:checked ~ .food-type-tab-btn label[for=food-type-tab3],
-input[id=food-type-tab4]:checked ~ .food-type-tab-btn label[for=food-type-tab4],
-input[id=food-type-tab5]:checked ~ .food-type-tab-btn label[for=food-type-tab5],
-input[id=food-type-tab6]:checked ~ .food-type-tab-btn label[for=food-type-tab6]{
+input[id="food-type-tab1"]:checked ~ .food-type-tab-btn label[for="food-type-tab1"],
+input[id="food-type-tab2"]:checked ~ .food-type-tab-btn label[for="food-type-tab2"],
+input[id="food-type-tab3"]:checked ~ .food-type-tab-btn label[for="food-type-tab3"],
+input[id="food-type-tab4"]:checked ~ .food-type-tab-btn label[for="food-type-tab4"],
+input[id="food-type-tab5"]:checked ~ .food-type-tab-btn label[for="food-type-tab5"],
+input[id="food-type-tab6"]:checked ~ .food-type-tab-btn label[for="food-type-tab6"] {
   color: var(--crimson);
 }
 
-input[id=food-type-tab1]:checked ~ .food-type-tabs .tab1,
-input[id=food-type-tab2]:checked ~ .food-type-tabs .tab2,
-input[id=food-type-tab3]:checked ~ .food-type-tabs .tab3,
-input[id=food-type-tab4]:checked ~ .food-type-tabs .tab4,
-input[id=food-type-tab5]:checked ~ .food-type-tabs .tab5,
-input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
+input[id="food-type-tab1"]:checked ~ .food-type-tabs .tab1,
+input[id="food-type-tab2"]:checked ~ .food-type-tabs .tab2,
+input[id="food-type-tab3"]:checked ~ .food-type-tabs .tab3,
+input[id="food-type-tab4"]:checked ~ .food-type-tabs .tab4,
+input[id="food-type-tab5"]:checked ~ .food-type-tabs .tab5,
+input[id="food-type-tab6"]:checked ~ .food-type-tabs .tab6 {
   display: block;
 }
 
-.tab-item{
+.tab-item {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
 }
-.tab-item .thum{
+.tab-item .thum {
   width: 110px;
   height: 90px;
   position: relative;
 }
-.tab-item .thum::before{
+.tab-item .thum::before {
   counter-increment: rank;
   position: absolute;
   content: counter(rank);
@@ -725,17 +700,18 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   top: 0;
   left: 0;
   text-align: center;
-  border-radius: 5px 0 0 0 ;
+  border-radius: 5px 0 0 0;
   padding-top: 4px;
 }
-.tab-item .thum img{
+.tab-item .thum img {
   width: inherit;
   height: inherit;
   object-fit: cover;
   border-radius: 5px;
 }
-.tab-item .desc{}
-.tab-item .desc .badge-wish{
+.tab-item .desc {
+}
+.tab-item .desc .badge-wish {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -754,32 +730,31 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   color: var(--silver-gray);
 }
 
-.wish.active::before{
+.wish.active::before {
   content: "\F415";
   color: var(--crimson);
-
 }
 
-.tab-item .goods-title div{
+.tab-item .goods-title div {
   justify-content: flex-start;
   gap: 10px;
 }
 
 /* Front Footer */
-.front-footer{
+.front-footer {
   padding: 20px;
   background-color: var(--gloudy-gray);
 }
-.front-footer > h3{
+.front-footer > h3 {
   margin-bottom: 0;
 }
-.company-link{
+.company-link {
   margin: 5px 0;
 }
-.company-link a{
+.company-link a {
   margin-right: 3px;
 }
-.company-link a::after{
+.company-link a::after {
   content: "|";
   color: var(--silver-gray);
   font-size: 10px;
@@ -787,10 +762,10 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   display: inline-block;
   transform: translateY(-2px);
 }
-.company-link a:last-child:after{
+.company-link a:last-child:after {
   display: none;
 }
-.company-info-title{
+.company-info-title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -800,11 +775,11 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   margin: 0;
   font-size: 16px;
 }
-.btn-view-more{
+.btn-view-more {
   background-color: transparent;
   border: none;
 }
-.btn-view-more::after{
+.btn-view-more::after {
   content: "\F282";
   font-family: bootstrap-icons;
   margin-left: 2px;
@@ -815,45 +790,47 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   display: none;
 }
 
-.company-info-more span{
+.company-info-more span {
   display: block;
 }
 
 /* #### Goods Detail html #### */
-.container.goods-detail{}
-.goods-detail-inner {}
+.container.goods-detail {
+}
+.goods-detail-inner {
+}
 .goods-detail-content {
   padding: 0;
 }
 
 /* Goods Slider */
-.goods-detail-slider-outer{
+.goods-detail-slider-outer {
   position: relative;
   /* border: 1px solid #000; */
 }
 
-.goods-detail-slider{}
-.goods-detail-slider a{
+.goods-detail-slider {
+}
+.goods-detail-slider a {
   width: 100%;
   height: 350px;
 }
-.goods-detail-slider a img{
+.goods-detail-slider a img {
   width: inherit;
   height: inherit;
   object-fit: cover;
 }
 
 /* Goods Slider Custom CSS */
-.goods-detail-slider .slick-dots{
+.goods-detail-slider .slick-dots {
   bottom: 15px;
 }
 .goods-detail-slider .slick-dots li button:before {
   color: #fff;
   opacity: 1;
   font-size: 9px;
-
 }
-.goods-detail-slider .slick-dots li.slick-active button:before{
+.goods-detail-slider .slick-dots li.slick-active button:before {
   color: var(--crimson);
 }
 .goods-detail-slider .slick-dots li {
@@ -908,8 +885,10 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   padding: 20px 0;
   gap: 10px;
 }
-.goods-delivery-info b {}
-.goods-delivery-info div {}
+.goods-delivery-info b {
+}
+.goods-delivery-info div {
+}
 .goods-delivery-info div span {
   display: block;
 }
@@ -919,15 +898,14 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 }
 
 /* Goods Detail */
-.goods-info-section{
+.goods-info-section {
   padding: 0px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .goods-info-section img {
   width: 100%;
-  transform: scale(1.1); 
-  transform-origin: center; 
-
+  transform: scale(1.1);
+  transform-origin: center;
 }
 
 /* Review */
@@ -952,8 +930,9 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 }
 
 /* Goods Accordion */
-.goods-accordion {}
-.goods-accordion .title{
+.goods-accordion {
+}
+.goods-accordion .title {
   border-bottom: 1px solid var((--gloudy-gray));
   height: 40px;
   font-weight: normal;
@@ -962,24 +941,23 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   align-items: center;
   position: relative;
 }
-.goods-accordion .title::after{
+.goods-accordion .title::after {
   content: "\F64D";
   position: absolute;
   font-family: bootstrap-icons;
   right: 20px;
 }
-.goods-accordion .detail{
+.goods-accordion .detail {
   display: none;
 }
 .goods-accordion .detail img {
   width: 100%;
-
 }
-.goods-accordion .title.active{
+.goods-accordion .title.active {
   color: var(--crimson);
   background-color: var(--snow);
 }
-.goods-accordion .title.active::after{
+.goods-accordion .title.active::after {
   content: "\F63B";
 }
 
@@ -1009,10 +987,10 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 }
 .goods-order-final-info {
 }
-.goods-order-final-info .goods-title{
+.goods-order-final-info .goods-title {
   margin: 20px 0;
 }
-.goods-order-final-info .goods-title h3{
+.goods-order-final-info .goods-title h3 {
   font-size: 16px;
 }
 .goods-order-final-info .goods-title > div {
@@ -1021,7 +999,7 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   /* align-items: center; */
 }
 
-.btn-fold{
+.btn-fold {
   background-color: transparent;
   border: none;
   width: 100%;
@@ -1041,12 +1019,12 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   left: 0;
 }
 
-.goods-order-choice .wish{
+.goods-order-choice .wish {
   font-size: 30px;
   flex: 1;
   /* transform: translateY(10px); */
 }
-.btn-order-choice{
+.btn-order-choice {
   background-color: var(--royalblue);
   flex: 6;
 }
@@ -1063,30 +1041,31 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   color: var(--light-gray);
   margin: 0;
 }
-.payment-benefit p a{
+.payment-benefit p a {
   text-decoration: underline;
 }
-.goods-order-btns{
+.goods-order-btns {
   display: flex;
   gap: 10px;
 }
-.btn-cart{
+.btn-cart {
   border: 1px solid var(--royalblue);
   color: var(--royalblue);
   background-color: #fff;
 }
-.btn-now-order{
+.btn-now-order {
   background-color: var(--royalblue);
 }
 
-
 /* #### Category html #### */
-.container.category{}
-.category-inner{}
-.category-content{
+.container.category {
+}
+.category-inner {
+}
+.category-content {
   padding: 0;
 }
-.category-accordion{
+.category-accordion {
   font-size: 16px;
 }
 .category-accordion .title {
@@ -1100,13 +1079,13 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   position: relative;
   padding: 0 20px;
 }
-.category-accordion .title.active::after{
+.category-accordion .title.active::after {
   background-color: transparent;
   transform: rotate(180deg);
 }
 .category-accordion .title:after,
-.user-shortcut a::after{
-  content:"\F282";
+.user-shortcut a::after {
+  content: "\F282";
   font-family: bootstrap-icons;
   background-color: var(--fuschia);
   width: 20px;
@@ -1125,16 +1104,20 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   background-color: var(--snow);
   padding: 0 20px;
 }
-.category-accordion .detail a{
+.category-accordion .detail a {
   display: block;
   padding: 2px 0;
 }
 
 /* #### Search html #### */
-.container.search {}
-.search-inner {}
-.search-content {}
-.search-field {}
+.container.search {
+}
+.search-inner {
+}
+.search-content {
+}
+.search-field {
+}
 .search-field input {
   border: none;
   padding: 8px;
@@ -1164,34 +1147,36 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .search-recent .items {
   margin: 15px 0;
 }
-.search-recent .items .item{
+.search-recent .items .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--gloudy-gray);
-  padding: 8px 0 ;
+  padding: 8px 0;
 }
-.search-recent .items .item span{
+.search-recent .items .item span {
   font-size: 15px;
 }
 
-.search-increase{}
-.search-increase .title{}
-.search-increase .title h3{
+.search-increase {
+}
+.search-increase .title {
+}
+.search-increase .title h3 {
   font-size: 16px;
   margin-bottom: 0;
 }
-.search-increase .title p{
+.search-increase .title p {
   padding: 0;
 }
-.search-increase-list{
+.search-increase-list {
   /* decimal 을 쓰지 않고 디자인을 할 수 있기 위해 none 으로 */
   list-style: none;
   padding-left: 15px;
   /* counter 로 다음과 같이 디자인을 줄 수 있다. 0 을 뺴고 1 부터 시작 기본값은 0 이지만 알고 있으면 좋아서  */
   counter-reset: rank 0;
 }
-.search-increase-list li:before{
+.search-increase-list li:before {
   counter-increment: rank;
   content: counter(rank);
   margin-right: 10px;
@@ -1208,12 +1193,14 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 }
 
 /* #### Mypage html #### */
-.container.mypage-content{}
-.mypage-inner{}
-.mypage-content{
+.container.mypage-content {
+}
+.mypage-inner {
+}
+.mypage-content {
   padding: 0;
 }
-.user-info{
+.user-info {
   padding: 20px;
   display: flex;
   gap: 10px;
@@ -1224,7 +1211,7 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .user-avatar {
   flex: 1;
 }
-.user-avatar img{
+.user-avatar img {
   width: 60px;
   height: 65px;
   border-radius: 50%;
@@ -1232,27 +1219,28 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .user-summary {
   flex: 4;
 }
-.rating{}
-.rating b{
+.rating {
+}
+.rating b {
   font-weight: 500;
   text-transform: uppercase;
   color: var(--limegreen);
 }
-.rating span{
+.rating span {
   font-weight: 400;
 }
-.btn-setting{
+.btn-setting {
   float: right;
   border: none;
   background-color: transparent;
   font-size: 20px;
   color: var(--silver-gray);
 }
-.nickname{
+.nickname {
   font-size: 18px;
   margin-top: 5px;
 }
-.point-coupon{
+.point-coupon {
   display: flex;
   gap: 5px;
 }
@@ -1264,13 +1252,13 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   display: flex;
   justify-content: space-between;
 }
-.point-coupon div span{
+.point-coupon div span {
   font-size: 13px;
   font-weight: normal;
 }
-.point-coupon div span:first-child{
+.point-coupon div span:first-child {
 }
-.point-coupon div span:last-child{
+.point-coupon div span:last-child {
   color: var(--crimson);
 }
 .point-coupon .point {
@@ -1283,7 +1271,7 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .delivering {
   padding: 20px;
 }
-.delivering h2{
+.delivering h2 {
   font-size: 16px;
 }
 .delivering-items {
@@ -1308,67 +1296,69 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   width: 60px;
   height: 60px;
 }
-.delivering-item .thum img{
+.delivering-item .thum img {
   object-fit: cover;
   width: inherit;
   height: inherit;
   border-radius: 5px;
 }
 .delivering-item .desc {
-  
 }
-.delivering-item .desc span{
+.delivering-item .desc span {
   font-weight: normal;
 }
-.delivering-item .desc b{
+.delivering-item .desc b {
   display: block;
   color: var(--limegreen);
   font-weight: 500;
   font-size: 16px;
 }
 
-.mypage .banner a img{
-   width: 100%;
-   /* width: 375px; */
+.mypage .banner a img {
+  width: 100%;
+  /* width: 375px; */
 }
-.user-shortcut{}
-.user-shortcut a{
-   display: block;
-   border-bottom: 1px solid var(--gloudy-gray);
-   height: 50px;
-   display: flex;
-   align-items: center;
-   padding: 0 15px;
-   font-size: 15px;
+.user-shortcut {
+}
+.user-shortcut a {
+  display: block;
+  border-bottom: 1px solid var(--gloudy-gray);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 15px;
 }
 .user-shortcut a:last-child {
   border: none;
 }
-.user-shortcut a::after{
+.user-shortcut a::after {
   transform: rotate(270deg);
   background-color: transparent;
   right: 10px;
 }
-.user-shortcut a span{
+.user-shortcut a span {
   font-weight: 400;
   margin-left: 5px;
 }
 .user-shortcut a .bi {
-   /* border: 1px solid #000; */
-   width: 25px;
-   text-align: center;
+  /* border: 1px solid #000; */
+  width: 25px;
+  text-align: center;
 }
-.user-shortcut a:nth-child(5) .bi{
+.user-shortcut a:nth-child(5) .bi {
   font-size: 20px;
 }
 
-.btn-signout{
+.btn-signout {
   background-color: var(--gainsboro);
 }
 
 /* #### Cart html #### */
-.container.cart {}
-.cart-inner {}
+.container.cart {
+}
+.cart-inner {
+}
 .cart-content {
   padding: 0;
 }
@@ -1397,23 +1387,24 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   border-bottom: 1px solid var(--gloudy-gray);
   padding-bottom: 10px;
 }
-.cart-items-check-all .cart-chk-all{
+.cart-items-check-all .cart-chk-all {
   width: 18px;
   height: 18px;
   transform: translateY(4px);
   margin-right: 5px;
   accent-color: var(--crimson);
 }
-.cart-items-check-all em{
+.cart-items-check-all em {
   font-style: normal;
   color: var(--crimson);
 }
-.cart-item-empty{
+.cart-item-empty {
   text-align: center;
   padding: 50px 0;
   display: none;
 }
-.cart-items {}
+.cart-items {
+}
 .cart-item {
   padding: 20px;
   border-bottom: 1px solid var(--gloudy-gray);
@@ -1425,17 +1416,16 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   margin-bottom: 10px;
 }
 
-.cart-item-title input[type=checkbox] {
+.cart-item-title input[type="checkbox"] {
   /* transform: scale(2); */
   /* zoom: 2; */
   width: 35px;
   height: 35px;
   transform: translateY(-2px);
-
 }
 
 .cart-item-title .btn-clear {
-  transform: translate(8px,-5px);
+  transform: translate(8px, -5px);
   font-size: 20px;
 }
 
@@ -1453,7 +1443,7 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   height: 80px;
   flex: 1;
 }
-.cart-item-thum img{
+.cart-item-thum img {
   width: inherit;
   height: inherit;
   object-fit: cover;
@@ -1462,18 +1452,18 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .cart-item-info {
   flex: 3;
 }
-.cart-item-info span{
+.cart-item-info span {
   display: block;
   /* border: 1px solid #000; */
 }
-.cart-item-info .delivery-date{
+.cart-item-info .delivery-date {
   color: var(--limegreen);
   font-weight: normal;
 }
-.cart-item-info .delivery-time{
+.cart-item-info .delivery-time {
   margin: 8px 0;
 }
-.cart-item-info .total-price{
+.cart-item-info .total-price {
   font-size: 18px;
   font-weight: normal;
 }
@@ -1482,12 +1472,12 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   border-radius: 3px;
   margin: 10px 0;
 }
-.cart-item-info .benefit em{
+.cart-item-info .benefit em {
   font-style: normal;
   font-size: 12px;
   margin-left: 5px;
 }
-.cart-item-info .benefit em:before{
+.cart-item-info .benefit em:before {
   content: "\F26E";
   font-family: bootstrap-icons;
   font-size: 16px;
@@ -1521,7 +1511,7 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   height: 30px;
   position: relative;
 }
-.custom-select::after{
+.custom-select::after {
   position: absolute;
   content: "\F229";
   font-family: bootstrap-icons;
@@ -1547,32 +1537,32 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
 .cart-items-summary {
   padding: 20px;
 }
-.cart-items-summary div{
+.cart-items-summary div {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
   /* margin-bottom: 10px; 과  margin: 10px 0;는 동일 위아래 마진이 겹피면 더 큰 값을 가져오기 때문, 죄우는 적용 x */
 }
-.cart-items-summary div span{
+.cart-items-summary div span {
   font-size: 15px;
 }
 
 .cart-items-summary div:last-child {
   border-top: 1px solid var(--gloudy-gray);
   padding-top: 15px;
-} 
+}
 
-.cart-items-summary div:last-child span:last-child{
+.cart-items-summary div:last-child span:last-child {
   font-size: 20px;
 }
-.cart-items-summary div span:first-child{
+.cart-items-summary div span:first-child {
   font-weight: normal;
 }
-.cart-items-summary div span:last-child{
+.cart-items-summary div span:last-child {
   font-weight: 500;
 }
 
-.btn-order{
+.btn-order {
   background-color: var(--deep-red);
   border-radius: 0;
 }
@@ -1584,18 +1574,10 @@ input[id=food-type-tab6]:checked ~ .food-type-tabs .tab6 {
   padding-left: 18px;
 }
 
-.cart-notice  li::before{
+.cart-notice li::before {
   /* content: "\F2EA"; */
   /* font-family: bootstrap-icons; */
   content: "-";
   margin-right: 5px;
   width: 2px;
 }
-
-
-
-
-
-
-
-

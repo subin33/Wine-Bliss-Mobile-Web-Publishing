@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Wine Bliss</title>
-</head>
-<body>
-  <script>
-    document.addEventListener('DOMContentLoaded',()=>{
-      const mobileList = ["Android", "iPhone", "iPad", "BlackBerry", "Windows Phone", "Samsung", "LG"," Window CE", "SonyEricsson", "Nokia"];
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Wine Bliss</title>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileList = ["Android", "iPhone", "iPad", "BlackBerry", "Windows Phone", "Samsung", "LG", " Window CE", "SonyEricsson", "Nokia"];
 
-      for(let i in mobileList){
-        if(navigator.userAgent.match(mobileList[i])) {
-          location.href = "/html/preloading.html"
-        }else{
-          location.href = "/mobile-mockup/single-view.html";
+        for (let i in mobileList) {
+          if (navigator.userAgent.match(mobileList[i])) {
+            location.href = "/html/preloading.html";
+          } else {
+            location.href = "/mobile-mockup/single-view.html";
+          }
         }
-      }
-    })
-  </script>
-</body>
+      });
+    </script>
+  </body>
 </html>
