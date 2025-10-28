@@ -6,13 +6,13 @@ Mobile-first storefront for browsing, searching, and purchasing wines. This repo
 
 | Page            | Description                                                              |
 | --------------- | ------------------------------------------------------------------------ |
-| Main Home       | Product showcase with badges for New/Popular, category navigation        |
-| Product Detail  | Wine information, price, discount, buy CTA, related items                |
-| Cart            | Selected items list, quantity controls, total calculation, checkout flow |
-| My Page         | Order history, shipping status, profile management, wishlist             |
-| Search          | Wine search, filtering options, sorting, results display                 |
-| Login / Sign Up | User authentication, account management, password recovery               |
-| Category        | Browse by wine type, price filters, sort options                         |
+| 메인 홈페이지       | 와인 상품 진열, 신상품 및 인기상품 배지 표시, 카테고리 네비게이션    |
+| 상품 상세 페이지    | 와인 상품 정보, 가격, 할인율, 구매 버튼, 관련 상품 추천            |
+| 장바구니            | 선택한 상품 목록, 수량 조절, 총 금액 계산, 주문 진행                |
+| 마이페이지          | 주문 내역, 배송 상태, 개인정보 관리, 찜한 상품 목록                |
+| 검색 페이지         | 와인 검색, 필터링 옵션, 정렬 기능, 검색 결과 표시                  |
+| 로그인/회원가입     | 사용자 인증, 회원 정보 관리, 비밀번호 찾기                         |
+| 카테고리 페이지      | 와인 종류별 분류, 가격대별 필터링, 정렬 옵션                        |
 
 ## Screenshots / UI Preview
 
